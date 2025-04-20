@@ -98,7 +98,7 @@ export const footerLinks = [
     {
         title: "Products",
         links: [
-            { name: "Air Force 1", link: "https://www.nike.com/in/w?q=air%20force%201&vst=air%20force%201" },
+            { name: "Air Fqsdqdsdsq1", link: "https://www.nike.com/in/w?q=air%20force%201&vst=air%20force%201" },
             { name: "Air Max 1", link: "https://www.nike.com/in/w?q=Air%20Max%201&vst=Air%20Max%201" },
             { name: "Air Jordan 1", link: "https://www.nike.com/in/w?q=Air%20Jordan%201&vst=Air%20Jordan%201" },
             { name: "Air Force 2", link: "https://www.nike.com/in/w?q=Air%20Force%202&vst=Air%20Force%202" },
