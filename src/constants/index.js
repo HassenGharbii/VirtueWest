@@ -1,25 +1,25 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter, youtube } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { facebook, instagram, support, twitter, youtube } from "../assets/icons";
+import {  customer1, customer2, modeldashtest, shoe4,flightdashboard,trafficdashboard,trafficmapdashboard } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about-us", label: "About Us" },
-    { href: "#products", label: "Products" },
+    { href: "#products", label: "Services" },
     { href: "#contact-us", label: "Contact Us" },
 ];
 
 export const shoes = [
     {
-        thumbnail: thumbnailShoe1,
-        bigShoe: bigShoe1,
+        thumbnail: flightdashboard,
+        bigShoe: flightdashboard,
     },
     {
-        thumbnail: thumbnailShoe2,
-        bigShoe: bigShoe2,
+        thumbnail: trafficdashboard,
+        bigShoe: trafficdashboard,
     },
     {
-        thumbnail: thumbnailShoe3,
-        bigShoe: bigShoe3,
+        thumbnail: trafficmapdashboard,
+        bigShoe: trafficmapdashboard,
     },
 ];
 
@@ -31,46 +31,50 @@ export const statistics = [
 
 export const products = [
     {
-        imgURL: shoe4,
-        name: "Nike Air Jordan-01",
-        rating: "4.1",
-        price: "MRP: ₹ 16 670.65",
+      imgURL: shoe4,
+      name: "Real Estate & Property Management",
+      rating: "4.1",
+      price: "MRP: ₹16,670.65",
+      keywords: ["sales tracking", "property availability", "occupancy rates", "ROI analysis", "agent performance"]
     },
     {
-        imgURL: shoe5,
-        name: "Nike Air Jordan-10",
-        rating: "4.8",
-        price: "MRP: ₹ 17 504.03",
+      imgURL: modeldashtest,
+      name: "Smart City & Security / Surveillance",
+      rating: "4.8",
+      price: "MRP: ₹17,504.03",
+      keywords: ["traffic monitoring", "surveillance", "public safety", "IoT sensors"]
     },
     {
-        imgURL: shoe6,
-        name: "Nike Air Jordan-100",
-        rating: "3.8",
-        price: "MRP: ₹ 18 336.76",
+      imgURL: modeldashtest,
+      name: "Tourism & Hospitality",
+      rating: "3.8",
+      price: "MRP: ₹18,336.76",
+      keywords: ["hotel occupancy", "tourist demographics", "customer satisfaction", "demand prediction"]
     },
     {
-        imgURL: shoe7,
-        name: "Nike Air Jordan-001",
-        rating: "3.4",
-        price: "MRP: ₹ 19 169.49",
+      imgURL: modeldashtest,
+      name: "Healthcare & Clinics",
+      rating: "3.4",
+      price: "MRP: ₹19,169.49",
+      keywords: ["patient tracking", "resource monitoring", "staff performance", "health KPIs"]
     },
-];
+  ];
 
 export const services = [
     {
-        imgURL: truckFast,
-        label: "Free shipping",
-        subtext: "Enjoy seamless shopping with our complimentary shipping service."
-    },
-    {
-        imgURL: shieldTick,
-        label: "Secure Payment",
-        subtext: "Experience worry-free transactions with our secure payment options."
+        imgURL: support,
+        label: "Data Security",
+        subtext: "Your information is protected with enterprise-grade security measures."
     },
     {
         imgURL: support,
-        label: "Love to help you",
-        subtext: "Our dedicated team is here to assist you every step of the way."
+        label: "Custom Integration",
+        subtext: "Seamlessly connect with your existing systems and workflows."
+    },
+    {
+        imgURL: support,
+        label: "24/7 Expert Support",
+        subtext: "Our team of dashboard specialists is always ready to assist you."
     },
 ];
 

@@ -1,54 +1,74 @@
-import { arrowRight } from "../assets/icons"
+import { arrowRight } from "../assets/icons";
 import { bigShoe1 } from "../assets/images";
-import { Button, ShoeCard } from "../components"
-import { statistics, shoes } from "../constants";
+import { Button, ShoeCard } from "../components";
+import { shoes } from "../constants";
 import { useState } from "react";
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
 
   return (
-    <section id="home" className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container">
-      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
-        <p className="text-xl font-montserrat text-coral-red"><span className="font-bold">Demo Website!</span><br/>Our Summer Collection</p>
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
-          <span className="xl:bg-white xl:whitespace-nowrap z-10 pr-10">
-            New Arrival
-          </span>
-          <br/>
-          <span className="text-coral-red inline-block mt-3">Nike</span> Shoes
-        </h1>
-        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 
-          sm:max-w-sm">
-          Discover stylish Nike arrivals, quality comfort, and innovation for your active life.
-        </p>
-        <Button label="Shop Now" iconURL={arrowRight}/>
-        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
-          {statistics.map((statistic) => (
-            <div key={statistic.label}>
-              <p className="text-4xl font-palanquin font-bold">{statistic.value}</p>
-              <p className="leading-7 font-montserrat text-slate-gray">{statistic.label}</p>
-            </div>
-          ))}
+    <>
+      <div id="home" className="h-[80px]"></div>
+      <section className="flex justify-between items-center max-lg:flex-col gap-2 w-full max-container py-10">
+        <div className="flex flex-1 flex-col">
+          <p className="text-lg font-montserrat text-coral-red">
+            <span className="font-bold">VirtueWest Demo</span><br />
+            Dashboarding the Future
+          </p>
+          <h2 className="mt-6 font-palanquin text-4xl capitalize font-bold lg:max-w-lg">
+            Smart & Stylish
+            <br />
+            <span className="text-coral-red inline-block mt-3">Dashboard</span> Solutions
+          </h2>
+          <p className="mt-4 lg:max-w-lg info-text">
+            Build modern, insightful dashboards tailored to your business. Designed for performance,
+            clarity, and results across multiple industries.
+          </p>
+          <p className="mt-6 lg:max-w-lg info-text">
+            Our goal is to make data work for you — clean, clear, and impactful.
+          </p>
+          <div className="mt-11">
+            <Button label="Explore More" iconURL={arrowRight} />
+          </div>
         </div>
-      </div>
 
-      <div className="flex-1 flex relative justify-center items-center xl:min-h-screen 
-        max-xl:py-40 bg-primary bg-hero rounded-xl shadow-xl bg-cover bg-center">
-        <img src={bigShoeImg} alt="Shoe Collection" width={610} height={500} 
-          className="object-contain relative z-10"/>
-          <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left=[10%] max-sm:px-6">
+        <div className="flex flex-1 flex-col items-center">
+          {/* Laptop Frame */}
+          <div className="relative w-[700px] h-[500px]">
+            {/* Laptop Screen */}
+            <div className="absolute w-full h-[80%] top-0 left-0 bg-gray-800 rounded-2xl p-3 shadow-2xl">
+              {/* Screen Content */}
+              <div className="w-full h-full bg-gray-900 rounded-lg overflow-hidden">
+                <img
+                  src={bigShoeImg}
+                  alt="Dashboard Preview"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+         
+            
+            {/* Laptop Notch (optional) */}
+            <div className="absolute w-16 h-2 top-[80%] left-1/2 transform -translate-x-1/2 bg-gray-700 rounded-b-sm"></div>
+          </div>
+
+          {/* Thumbnail Navigation */}
+          <div className="flex sm:gap-6 gap-4 mt-2 justify-center">
             {shoes.map((shoe, index) => (
               <div key={index}>
-                <ShoeCard imgURL={shoe}
-                  changeBigShoeImage={(shoe) => setBigShoeImg(shoe)} 
-                  bigShoeImg={bigShoeImg}/>
+                <ShoeCard
+                  imgURL={shoe}
+                  changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
+                  bigShoeImg={bigShoeImg}
+                />
               </div>
             ))}
           </div>
-      </div>
-    </section>
-  )
-}
+        </div>
+      </section>
+    </>
+  );
+};
 
-export default Hero
+export default Hero;
